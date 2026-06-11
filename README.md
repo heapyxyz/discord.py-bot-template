@@ -15,9 +15,14 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
     BOT_TOKEN="MTM0NTY3ODkwMTIzNDU2Nzg5.CDEfGH.IJKLMN_opq1234567890abcdef"
     ```
 
-4. **Instal Dependencies:**  
+4. **Install Dependencies:**  
+    Using **pip**:
     ```bash
     python -m pip install -r requirements.txt
+    ```
+    Using **uv**:
+    ```bash
+    uv sync
     ```
 
 5. **Create Your First Command (Cog):**  
@@ -46,6 +51,11 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
     For more information, please [read this](https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html).
 
 6. **Run the Bot:**  
+    Using **pip**:
     ```bash
     python main.py
+    ```
+    Using **uv**:
+    ```bash
+    uv run python main.py
     ```
