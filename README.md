@@ -16,11 +16,10 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
     ```
 
 4. **Install Dependencies:**  
-    Using **pip**:
     ```bash
     python -m pip install -r requirements.txt
     ```
-    Using **uv**:
+    If you're using **uv**, run this instead:
     ```bash
     uv sync
     ```
@@ -51,11 +50,10 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
     For more information, please [read this](https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html).
 
 6. **Run the Bot:**  
-    Using **pip**:
     ```bash
     python main.py
     ```
-    Using **uv**:
+    If you're using **uv**, run this instead:
     ```bash
-    uv run python main.py
+    uv run main.py
     ```
