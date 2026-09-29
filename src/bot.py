@@ -5,7 +5,7 @@ import glob
 
 class Bot(commands.Bot):
     def __init__(self):
-        intents = discord.Intents.all()
+        intents = discord.Intents.default()
         super().__init__(command_prefix="/", intents=intents)
 
     async def on_ready(self):
