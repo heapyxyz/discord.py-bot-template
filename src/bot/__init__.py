@@ -1,9 +1,10 @@
-from src import Bot
 from dotenv import load_dotenv
 import os
 
+from .bot import *
 
-if __name__ == "__main__":
+
+def main():
     load_dotenv()
     token = os.environ.get("BOT_TOKEN")
 

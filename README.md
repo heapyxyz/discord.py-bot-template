@@ -1,14 +1,14 @@
 # discord.py-template
 
-A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html)) template I use for all of my bots. Feel free to use and modify it.
+A simple Discord.py bot template I use for all of my bots. Feel free to use and modify it. `uv` is required to run this bot.
 
 ## Usage
 
 1. **Get a Bot Token:**  
-   Create a bot in [Discord's Developer Portal](https://discord.com/developers/applications/) and copy its token.
+   Create a bot in [Discord Developer Portal](https://discord.com/developers/applications/) and copy its token.
 
 2. **Create Environment File:**  
-   Rename `.env.example` to `.env`.
+   Copy `.env.example` file as `.env`.
 
 3. **Add the Token:**  
    Paste the token into the `.env` file. It should look like this:
@@ -21,45 +21,17 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
 4. **Install Dependencies:**
 
    ```bash
-   python -m pip install -r requirements.txt
-   ```
-
-   If you're using `uv`, run this instead:
-
-   ```bash
    uv sync
    ```
 
-5. **Create Your First Command (Cog):**  
-   The bot automatically detects (recursively) and loads cogs inside `src/cogs/` directory. Here is a simple "hello" slash command to get you started:
+5. **Run the Bot:**
 
-   ```py
-   import discord
-   from discord import app_commands
-   from discord.ext import commands
-   from ..bot import Bot
-
-
-   class Greetings(commands.Cog):
-       def __init__(self, bot: Bot):
-           self.bot = bot
-
-       @app_commands.command(name="hello", description="Greets the user back.")
-       async def hello(self, interaction: discord.Interaction):
-           await interaction.response.send_message(f"Hello, {interaction.user.mention}!")
-
-
-   async def setup(bot: Bot):
-       await bot.add_cog(Greetings(bot))
-   ```
-
-   For more information, please [read this](https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html).
-
-6. **Run the Bot:**
    ```bash
-   python main.py
+   uv run bot
    ```
-   If you're using `uv`, run this instead:
-   ```bash
-   uv run main.py
-   ```
+
+## Managing Cogs
+
+The bot automatically detects (recursively) and loads cogs inside `src/bot/cogs/` directory. An example `/hello` command is available in [`hello.py`](./src/bot/cogs/hello.py) to get you started.
+
+For more information, read [discord.py documentation](https://discordpy.readthedocs.io/en/stable/ext/commands/cogs.html).
