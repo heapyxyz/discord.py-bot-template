@@ -4,13 +4,13 @@ A simple Discord.py bot template I use for all of my bots. Feel free to use and 
 
 ## Usage
 
-1. **Get a Bot Token:**  
+1. **Get a bot token:**  
    Create a bot in [Discord Developer Portal](https://discord.com/developers/applications/) and copy its token.
 
-2. **Create Environment File:**  
+2. **Create environment file:**  
    Copy `.env.example` file as `.env`.
 
-3. **Add the Token:**  
+3. **Add the token:**  
    Paste the token into the `.env` file. It should look like this:
 
    ```bash
@@ -18,19 +18,19 @@ A simple Discord.py bot template I use for all of my bots. Feel free to use and 
    BOT_TOKEN="MTM0NTY3ODkwMTIzNDU2Nzg5.CDEfGH.IJKLMN_opq1234567890abcdef"
    ```
 
-4. **Install Dependencies:**
+4. **Install dependencies:**
 
    ```bash
    uv sync
    ```
 
-5. **Run the Bot:**
+5. **Run the bot:**
 
    ```bash
    uv run bot
    ```
 
-## Managing Cogs
+## Managing cogs
 
 The bot automatically detects (recursively) and loads cogs inside `src/bot/cogs/` directory. An example `/hello` command is available in [`hello.py`](./src/bot/cogs/hello.py) to get you started.
 
